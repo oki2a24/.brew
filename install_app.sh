@@ -1,10 +1,10 @@
 #!/bin/bash
 #
 # Usage:
-#   install.sh
+#   install_app.sh
 #
 # Description:
-#   Mac へアプリをインストールするスクリプトを呼び出し、実行します。
+#   Mac へアプリをインストールします。
 #
 ###########################################################################
 
@@ -12,5 +12,7 @@ set -eux
 
 readonly TOOLS_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-bash "$TOOLS_DIR/install_brew.sh"
-bash "$TOOLS_DIR/install_app.sh"
+brew update && brew upgrade && brew cleanup
+
+brew install git
+bash "$TOOLS_DIR/set_git_completion.sh"

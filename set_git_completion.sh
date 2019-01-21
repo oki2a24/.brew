@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# Usage:
+#   set_git_completion.sh
+#
+# Description:
+#   Git のタブ補完、ブランチを表示する設定を追記します。
+#
+###########################################################################
+
+set -eux
+
+grep -q "git-completion.bash" ~/.bash_profile \
+|| cat >> ~/.bash_profile <<'EOF'
+# ターミナルでタブ補完を有効
+source /usr/local/etc/bash_completion.d/git-completion.bash
+EOF
+
+grep -q "git-prompt.sh" ~/.bash_profile \
+|| cat >> ~/.bash_profile <<'EOF'
+# プロンプトに各種追加情報を表示可能にする
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+EOF
+
+grep -q "GIT_PS1_SHOWDIRTYSTATE=true" ~/.bash_profile \
+|| cat >> ~/.bash_profile <<'EOF'
+# ターミナルにブランチ名を表示
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\h\[\033[00m\]:\W\[\033[31m\]$(__git_ps1 [%s])\[\033[00m\]\$ '
+EOF
+
+# 反映
+source ~/.bash_profile
