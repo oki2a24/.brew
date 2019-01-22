@@ -8,8 +8,6 @@
 #
 ###########################################################################
 
-set -eux
-
 grep -q "git-completion.bash" ~/.bash_profile \
 || cat >> ~/.bash_profile <<'EOF'
 # ターミナルでタブ補完を有効
