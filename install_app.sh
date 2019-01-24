@@ -22,5 +22,8 @@ brew install bash-completion
 bash "$TOOLS_DIR/set_bash_completion.sh"
 brew install git
 bash "$TOOLS_DIR/set_git_completion.sh"
+brew install mas
 brew install packer
 brew install vim
+
+mas install 926036361 #LastPass
