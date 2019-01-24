@@ -18,6 +18,8 @@ brew cask install google-chrome
 brew cask install docker
 brew cask install evernote
 brew cask install virtualbox
+brew install bash-completion
+bash "$TOOLS_DIR/set_bash_completion.sh"
 brew install git
 bash "$TOOLS_DIR/set_git_completion.sh"
 brew install packer

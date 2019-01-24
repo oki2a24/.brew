@@ -8,6 +8,11 @@
 #
 ###########################################################################
 
+# 最終行に記述があるのであれば、空白行を追加する
+if [[ -e ~/.bash_profile ]] && [[ -n $(tail -1 ~/.bash_profile) ]]; then
+  echo "" >> ~/.bash_profile
+fi
+
 grep -q "git-completion.bash" ~/.bash_profile \
 || cat >> ~/.bash_profile <<'EOF'
 # ターミナルでタブ補完を有効
