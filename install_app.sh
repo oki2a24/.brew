@@ -16,7 +16,6 @@ brew update && brew upgrade && brew cleanup
 
 brew cask install google-chrome
 brew cask install docker
-brew cask install evernote
 brew cask install virtualbox
 brew install bash-completion
 bash "$TOOLS_DIR/set_bash_completion.sh"
@@ -26,4 +25,5 @@ brew install mas
 brew install packer
 brew install vim
 
+mas install 406056744 #Evernote
 mas install 926036361 #LastPass
