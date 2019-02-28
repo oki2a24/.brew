@@ -26,5 +26,7 @@ brew install mas
 brew install packer
 brew install vim
 
+mas upgrade
+
 mas install 406056744 #Evernote
 mas install 926036361 #LastPass
