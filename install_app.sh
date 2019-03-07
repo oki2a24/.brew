@@ -28,6 +28,6 @@ brew install vim
 
 mas upgrade
 
-mas install 405399194 #Kindle
-mas install 406056744 #Evernote
-mas install 926036361 #LastPass
+mas install 405399194 # Kindle
+mas install 406056744 # Evernote
+mas install 926036361 # LastPass
