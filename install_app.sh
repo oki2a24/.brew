@@ -24,6 +24,7 @@ brew install git
 bash "$TOOLS_DIR/set_git_completion.sh"
 brew install mas
 brew install packer
+brew install tree
 brew install vim
 
 mas upgrade
