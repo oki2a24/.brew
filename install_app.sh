@@ -16,6 +16,7 @@ brew update && brew upgrade && brew cleanup
 
 brew cask install google-chrome
 brew cask install docker
+bash "$TOOLS_DIR/set_docker_bash_completion.sh"
 brew cask install virtualbox
 brew cask install visual-studio-code
 brew install bash-completion
