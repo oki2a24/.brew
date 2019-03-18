@@ -14,11 +14,14 @@ readonly TOOLS_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 brew update && brew upgrade && brew cleanup
 
+# Homebrew Cask http://caskroom.io/
+brew tap caskroom/cask
 brew cask install google-chrome
 brew cask install docker
 bash "${TOOLS_DIR}/set_docker_bash_completion.sh"
 brew cask install virtualbox
 brew cask install visual-studio-code
+
 brew install bash-completion
 bash "${TOOLS_DIR}/set_bash_completion.sh"
 brew install git
