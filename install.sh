@@ -12,5 +12,5 @@ set -eux
 
 readonly TOOLS_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-bash "$TOOLS_DIR/install_brew.sh"
-bash "$TOOLS_DIR/install_app.sh"
+bash "${TOOLS_DIR}/install_brew.sh"
+bash "${TOOLS_DIR}/install_app.sh"
