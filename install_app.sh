@@ -31,8 +31,10 @@ brew install packer
 brew install tree
 brew install vim
 
-mas upgrade
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
 
+mas upgrade
 mas install 405399194 # Kindle
 mas install 406056744 # Evernote
 mas install 926036361 # LastPass
