@@ -16,6 +16,7 @@ brew update && brew upgrade && brew cleanup
 
 # Homebrew Cask http://caskroom.io/
 brew tap caskroom/cask
+brew cask upgrade
 brew cask install google-chrome
 brew cask install docker
 bash "${TOOLS_DIR}/set_docker_bash_completion.sh"
