@@ -29,7 +29,7 @@ grep -q "GIT_PS1_SHOWDIRTYSTATE=true" ~/.bash_profile \
 || cat >> ~/.bash_profile <<'EOF'
 # ターミナルにブランチ名を表示
 GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\h\[\033[00m\]:\W\[\033[31m\]$(__git_ps1 [%s])\[\033[00m\]\$ '
+export PS1='\[\e[1;32m\]\u@\h\[\e[m\]:\[\e[1;34m\]\W\[\e[m\]$(__git_ps1 "(\[\e[1;31m\]%s\[\e[m\])")\$'
 EOF
 
 # 反映
