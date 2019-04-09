@@ -21,15 +21,20 @@ EOF
 
 grep -q "git-prompt.sh" ~/.bash_profile \
 || cat >> ~/.bash_profile <<'EOF'
-# プロンプトに各種追加情報を表示可能にする
+# プロンプトに各種追加情報を表示
 source /usr/local/etc/bash_completion.d/git-prompt.sh
-EOF
-
-grep -q "GIT_PS1_SHOWDIRTYSTATE=true" ~/.bash_profile \
-|| cat >> ~/.bash_profile <<'EOF'
-# ターミナルにブランチ名を表示
-GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\[\e[1;32m\]\u@\h\[\e[m\]:\[\e[1;34m\]\W\[\e[m\]$(__git_ps1 "(\[\e[1;31m\]%s\[\e[m\])")\$'
+if type __git_ps1 > /dev/null 2>&1 ; then
+  GIT_PS1_SHOWDIRTYSTATE=true
+  GIT_PS1_SHOWSTASHSTATE=true
+  GIT_PS1_SHOWUNTRACKEDFILES=true
+  GIT_PS1_SHOWUPSTREAM="auto"
+  GIT_PS1_SHOWCOLORHINTS=true
+  PROMPT_COMMAND='\
+    __git_ps1 \
+    "\[\e[1;32m\]\u@\h\[\e[m\]:\[\e[1;34m\]\W\[\e[m\]" \
+    "\$ " \
+  '
+fi
 EOF
 
 # 反映
