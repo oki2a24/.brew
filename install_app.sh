@@ -31,6 +31,7 @@ bash "${TOOLS_DIR}/set_git_completion.sh"
 brew install kryptco/tap/kr
 brew install mas
 brew install packer
+brew install the_silver_searcher
 brew install tmux
 brew install tree
 brew install vim
