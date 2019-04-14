@@ -28,6 +28,7 @@ bash "${TOOLS_DIR}/set_bash_completion.sh"
 brew install composer
 bash "${TOOLS_DIR}/set_composer.sh"
 brew install fzf
+bash "${TOOLS_DIR}/set_fzf.sh"
 brew install git
 bash "${TOOLS_DIR}/set_git_completion.sh"
 brew install kryptco/tap/kr
