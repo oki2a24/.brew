@@ -17,7 +17,7 @@ fi
 grep -q "bash_completion.sh" ~/.bash_profile \
 || cat >> ~/.bash_profile <<'EOF'
 # bash-completion を使用
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+type brew > /dev/null 2>&1 && [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 EOF
 
 # 反映

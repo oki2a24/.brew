@@ -8,4 +8,4 @@
 #
 ###########################################################################
 
-/usr/local/opt/fzf/install --all
+$(brew --prefix)/opt/fzf/install --all
