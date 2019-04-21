@@ -8,9 +8,20 @@
 #
 ###########################################################################
 
-set -eux
+set -eu
 
 readonly TOOLS_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-bash "${TOOLS_DIR}/install_brew.sh"
-bash "${TOOLS_DIR}/install_app.sh"
+is_osx() {
+  [ $(uname) == "Darwin" ]
+}
+
+main() {
+  if is_osx; then
+    bash "${TOOLS_DIR}/install_brew.sh"
+    bash "${TOOLS_DIR}/install_app.sh"
+  else
+    echo 'is not osx. do nothing.'
+  fi
+}
+main
