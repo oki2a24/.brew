@@ -4,7 +4,7 @@
 #   install.sh
 #
 # Description:
-#   Mac へアプリをインストールするスクリプトを呼び出し、実行します。
+#   Mac または Linux へアプリをインストールするスクリプトを呼び出し、実行します。
 #
 ###########################################################################
 
@@ -21,7 +21,8 @@ main() {
     bash "${TOOLS_DIR}/install_brew.sh"
     bash "${TOOLS_DIR}/install_app.sh"
   else
-    echo 'is not osx. do nothing.'
+    bash "${TOOLS_DIR}/install_linuxbrew.sh"
+    bash "${TOOLS_DIR}/install_linuxapp.sh"
   fi
 }
 main
