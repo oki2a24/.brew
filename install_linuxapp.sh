@@ -10,6 +10,6 @@
 
 set -eux
 
-readonly TOOLS_DIR="$(cd "$(dirname "$0")" && pwd)"
+readonly CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-brew bundle install --file=${TOOLS_DIR}/bundle/linux/Brewfile
+brew bundle install --file=${CURRENT_DIR}/bundle/linux/Brewfile

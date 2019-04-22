@@ -10,7 +10,7 @@
 
 set -eu
 
-readonly TOOLS_DIR="$(cd "$(dirname "$0")" && pwd)"
+readonly CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 is_osx() {
   [ $(uname) == "Darwin" ]
@@ -18,11 +18,11 @@ is_osx() {
 
 main() {
   if is_osx; then
-    bash "${TOOLS_DIR}/install_brew.sh"
-    bash "${TOOLS_DIR}/install_app.sh"
+    bash "${CURRENT_DIR}/install_brew.sh"
+    bash "${CURRENT_DIR}/install_app.sh"
   else
-    bash "${TOOLS_DIR}/install_linuxbrew.sh"
-    bash "${TOOLS_DIR}/install_linuxapp.sh"
+    bash "${CURRENT_DIR}/install_linuxbrew.sh"
+    bash "${CURRENT_DIR}/install_linuxapp.sh"
   fi
 }
 main
