@@ -10,7 +10,7 @@
 
 set -eu
 
-readonly CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
+readonly CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 is_osx() {
   [ $(uname) == "Darwin" ]

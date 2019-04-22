@@ -10,7 +10,7 @@
 
 set -eux
 
-readonly CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
+readonly CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 brew bundle install --file=${CURRENT_DIR}/bundle/mac/Brewfile
 bash "${CURRENT_DIR}/set_bash_completion.sh"
