@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Usage:
-#   install_app.sh
+#   install_linuxapp.sh
 #
 # Description:
 #   Linux へアプリをインストールします。
